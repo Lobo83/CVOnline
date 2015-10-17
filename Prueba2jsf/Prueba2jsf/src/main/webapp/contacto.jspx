@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="abstractIndex.jspx">
+
+	<ui:define name="content">
+		<div id="page">
+			<div class="inner_copy"></div>
+			<div id="page-bgtop">
+				<div id="content">
+				<h:form>
+					<h:panelGrid columns="1" >
+						<!-- Remitente -->
+						<h:panelGroup>
+							<h:outputText value="#{ msg['content.contacto.remitente']}"></h:outputText>
+							<h:inputText style="width: 150px; margin-left: 5px" value="#{contactBean.remitente }"/>
+						</h:panelGroup>
+						<!-- Correo Remitente -->
+						<h:panelGroup>
+							<h:outputText value="#{ msg['content.contacto.correoremitente']}"></h:outputText>
+							<h:inputText style="width: 150px; margin-left: 5px" value="#{contactBean.correoRemitente }"/>
+						</h:panelGroup>
+						<!-- Cuerpo mensaje -->
+						<h:panelGroup>
+							
+							<h:inputTextarea style="width: 400px; height: 200px;max-width: 400px;max-height: 200px" value="#{contactBean.mensaje }"/>
+							<h:commandLink actionListener="#{contactBean.sendMessage}" value="#{msg['content.contact.enviar']}" ><span></span></h:commandLink>
+						</h:panelGroup>
+					</h:panelGrid>
+					</h:form>
+				</div>
+			</div>
+		</div>
+<!-- <div style="clear:both">&nbsp;</div> -->
+	</ui:define>
+
+</ui:composition>
+</html>

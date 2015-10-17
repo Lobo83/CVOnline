@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<h:html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:loboutils="http://java.sun.com/jsf/composite/loboutils">
+<h:body>
+	<ui:composition>
+		<div id="header-wrapper">
+			<div id="header">
+				<h:panelGrid styleClass="fcenter" width="100%" columns="1">
+					<h:panelGroup>
+						<h2>
+							<h:outputText value="Jose Luis Antón Bueso" />
+						</h2>
+
+					</h:panelGroup>
+					<h:panelGroup>
+						<h3>
+							<h:outputText value="#{msg['header.presentacion.profesion']}" />
+						</h3>
+					</h:panelGroup>
+					<h:panelGroup>
+						<div class="h3_sin_mayusculas">
+							<h:outputText value="#{msg['header.presentacion.correo']}" />
+							<h:outputText styleClass="h3_sin_mayusculas"
+								value="inmortalland83@gmail.com" />
+						</div>
+					</h:panelGroup>
+					<h:panelGroup>
+						<div class="h3_sin_mayusculas">
+							<h:outputText value="#{msg['header.presentacion.telefono']}" />
+							<h:outputText value="+34 660 34 23 23" />
+						</div>
+					</h:panelGroup>
+				</h:panelGrid>
+				<div align="right">
+					<h:panelGrid columns="2">
+						<h:panelGroup>
+							<h:outputText style="color:#549900"
+								value="#{msg['mnu.select.idioma']}" />
+
+						</h:panelGroup>
+						<h:panelGroup>
+							<loboutils:localeutil />
+						</h:panelGroup>
+					</h:panelGrid>
+				</div>
+			</div>
+		</div>
+
+		<div id="menu">
+			<h:panelGrid columns="4" style=" padding-left: 400px">
+				<h:panelGroup>
+					<ul>
+						<li><h:outputText value="#{msg['mnu.bar.cv']}" />
+
+							<ul>
+								<li><a href="#"><h:outputText
+											value="#{msg['mnu.bar.cv.estudios']}" /></a></li>
+								<li><a href="#"><h:outputText
+											value="#{msg['mnu.bar.cv.conocimientos']}" /></a></li>
+							</ul></li>
+					</ul>
+				</h:panelGroup>
+				<h:panelGroup>
+					<ul>
+						<li><h:outputText value="#{msg['mnu.bar.experiencia']}" />
+
+							<ul>
+								<li><a href="#"><h:outputText
+											value="#{msg['mnu.bar.experiencia.proyectos']}" /></a></li>
+							</ul></li>
+					</ul>
+				</h:panelGroup>
+				<h:panelGroup>
+					<ul>
+						<li><h:outputText value="#{msg['mnu.bar.personal']}" />
+
+							<ul>
+								<li><a href="carta.jspx"><h:outputText
+											value="#{msg['mnu.bar.personal.carta']}" /></a></li>
+								<li><a href="#"><h:outputText
+											value="#{msg['mnu.bar.personal.aficiones']}" /></a></li>
+							</ul></li>
+					</ul>
+				</h:panelGroup>
+				<h:panelGroup>
+					<ul>
+						<li><h:outputText value="#{msg['mnu.bar.contacto']}" />
+							<ul>
+								<li><a href="contacto.jspx"><h:outputText
+											value="#{msg['mnu.bar.contacto']}" /></a></li>
+							</ul>
+						</li>
+					</ul>
+				</h:panelGroup>
+			</h:panelGrid>
+		</div>
+	</ui:composition>
+</h:body>
+</h:html>

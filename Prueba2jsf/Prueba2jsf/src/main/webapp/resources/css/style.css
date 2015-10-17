@@ -1,0 +1,64 @@
+.fleft {float:left}
+.fright {float:right}
+.fcenter {float:none;text-align:center}
+.fclear {clear:both}
+.inner_copy {border:0;color:#f00;float:left;width:50% !important;margin:-100% 0 0 0;overflow:hidden;line-height:0;padding:0;font-size:11px}
+body {margin:0;padding:0;background:#F3F2ED url(images/img04.jpg) repeat-x left top;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#464646}
+h1, h2, h3 {margin:0;text-transform:uppercase;font-weight:normal;color:#549900}
+.h3_sin_mayusculas {margin:0;font-weight:normal;color:#549900}
+h1 {font-size:44px}
+h2 {font-size:18px}
+h3 {}
+p, ul, ol {margin-top:0;line-height:240%;text-align:justify}
+ul, ol {}
+blockquote {}
+a {color:#4E832F}
+/* a:hover {text-decoration:none} */
+a img {border:none}
+img.left {float:left;margin:7px 30px 0 0}
+img.right {float:right;margin:7px 0 0 30px}
+hr {display:none}
+.list1 {}
+.list1 li {float:left;line-height:normal}
+.list1 li img {margin:0 30px 30px 0}
+.list1 li.alt img {margin-right:0}
+#wrapper {}
+/* Header */
+#header-wrapper {height:120px;background:#131313}
+#header {width:100%;margin:0 auto}
+/* Menu */
+#menu { float:center;width:100%;height:30px; background:#9C9C9C;color:#549900 }
+#menu a {display:block;float:center;}
+#menu a:hover {text-decoration:none}
+#menu .current_page_item a {}
+#menu .first {}
+#menu ul li ul {display: none;position: absolute}
+#menu ul li:hover ul, #menu ul:hover li ul {display: block;
+position: absolute;padding:0px 0px 0px 5px
+}
+
+/* #menu ul li ul li a:hover{border-top-color: #fff;} */
+
+/* Page */
+#page {width:1000px;height:400px; margin:0 auto;margin:0 auto;background:#fff url(images/img06.jpg) repeat-y left 20px}
+#page-bgtop {width:920px; height:400px; margin:0 auto;padding:40px 40px 0 40px;background:url(images/img05.jpg) no-repeat left top}
+
+
+/* Content */
+#content {float:left;width:100%}
+/* Calendar */
+#calendar {}
+#calendar caption {padding-bottom:5px;font-weight:bold}
+#calendar table {width:100%;border-collapse:collapse;border-bottom:1px solid #24130F;border-left:1px solid #24130F;border-right:1px solid #24130F}
+#calendar thead th {padding:5px 0;text-align:center;border-top:1px solid #24130F;border-left:1px solid #24130F;background:#24130F}
+#calendar tbody td {padding:5px 0;text-align:center;border-top:1px solid #24130F;border-left:1px solid #24130F;border-bottom:1px solid #24130F}
+#calendar tfoot td {padding:5px;border-left:1px solid #24130F;border-bottom:1px solid #24130F}
+#calendar tfoot #next {border-top:1px solid #24130F;text-align:right}
+#calendar tfoot #prev {border-top:1px solid #24130F}
+#calendar .pad {border-bottom:1px solid #24130F}
+#calendar #today {background:#24130F}
+/* Footer */
+#footer {width:100%;border-top:1px solid #E0E0E0;background:#9C9C9C;color:#549900}
+#footer-bgcontent {}
+#footer p {margin:0;text-align:center;font-size:12px}
+#footer a {}
