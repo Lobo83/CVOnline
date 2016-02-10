@@ -18,15 +18,7 @@ public class MyBean implements Serializable {
 
     private List<SelectItem> listaIdiomas;
 
-    String str = "hello";
-
-    private String idioma;
-    public String getIdioma() {
-		return idioma;
-	}
-	public void setIdioma(String idioma) {
-		this.idioma = idioma;
-	}
+    
 	public void init(){
 
     	listaIdiomas = new ArrayList<SelectItem>();
@@ -46,26 +38,13 @@ public class MyBean implements Serializable {
     	
     }
     public List<SelectItem> getListaIdiomas() {
-    	SelectItem lala;
     	
 		return listaIdiomas;
 	}
 	public void setListaIdiomas(List<SelectItem> listaIdiomas) {
 		this.listaIdiomas = listaIdiomas;
 	}
-	public String getStr() {
-        return str;
-    }
-
-    
-	public void setStr(String str) {
-        this.str = str;
-    }
-
-    public void reset(ActionEvent ae) {
-        str = "";
-    }
-    
+	
     public void selectedLocaleListener(ValueChangeEvent vce){
     	Locale l= new Locale(vce.getNewValue().toString());
     	FacesContext.getCurrentInstance().getViewRoot().setLocale(l);

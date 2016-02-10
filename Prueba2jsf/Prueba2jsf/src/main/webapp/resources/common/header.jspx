@@ -4,7 +4,8 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:loboutils="http://java.sun.com/jsf/composite/loboutils">
+	xmlns:loboutils="http://java.sun.com/jsf/composite/loboutils"
+	xmlns:p="http://primefaces.org/ui">
 <h:body>
 	<ui:composition>
 		<div id="header-wrapper">
@@ -50,54 +51,30 @@
 			</div>
 		</div>
 
-		<div id="menu">
-			<h:panelGrid columns="4" style=" padding-left: 400px">
-				<h:panelGroup>
-					<ul>
-						<li><h:outputText value="#{msg['mnu.bar.cv']}" />
 
-							<ul>
-								<li><a href="#"><h:outputText
-											value="#{msg['mnu.bar.cv.estudios']}" /></a></li>
-								<li><a href="#"><h:outputText
-											value="#{msg['mnu.bar.cv.conocimientos']}" /></a></li>
-							</ul></li>
-					</ul>
-				</h:panelGroup>
-				<h:panelGroup>
-					<ul>
-						<li><h:outputText value="#{msg['mnu.bar.experiencia']}" />
+		<p:menubar style="width: 100%; margin-left:auto; margin-right:auto;">
+			<p:submenu label="#{msg['mnu.bar.cv']}" icon="ui-icon-document"
+				style="margin-left:37%">
+				<p:menuitem value="#{msg['mnu.bar.cv.estudios']}" url="#" />
+				<p:menuitem value="#{msg['mnu.bar.cv.conocimientos']}" url="#" />
+			</p:submenu>
+			<p:submenu label="#{msg['mnu.bar.experiencia']}">
+				<p:menuitem value="#{msg['mnu.bar.experiencia.proyectos']}" url="#" />
+			</p:submenu>
+			<p:submenu label="#{msg['mnu.bar.personal']}">
+				<p:menuitem value="#{msg['mnu.bar.personal.carta']}"
+					url="carta.jspx" />
+				<p:menuitem value="#{msg['mnu.bar.personal.aficiones']}" url="#" />
+			</p:submenu>
+			<p:submenu label="#{msg['mnu.bar.contacto']}">
+				<p:menuitem value="#{msg['mnu.bar.contacto']}" url="contacto.jspx" />
+			</p:submenu>
+		</p:menubar>
 
-							<ul>
-								<li><a href="#"><h:outputText
-											value="#{msg['mnu.bar.experiencia.proyectos']}" /></a></li>
-							</ul></li>
-					</ul>
-				</h:panelGroup>
-				<h:panelGroup>
-					<ul>
-						<li><h:outputText value="#{msg['mnu.bar.personal']}" />
 
-							<ul>
-								<li><a href="carta.jspx"><h:outputText
-											value="#{msg['mnu.bar.personal.carta']}" /></a></li>
-								<li><a href="#"><h:outputText
-											value="#{msg['mnu.bar.personal.aficiones']}" /></a></li>
-							</ul></li>
-					</ul>
-				</h:panelGroup>
-				<h:panelGroup>
-					<ul>
-						<li><h:outputText value="#{msg['mnu.bar.contacto']}" />
-							<ul>
-								<li><a href="contacto.jspx"><h:outputText
-											value="#{msg['mnu.bar.contacto']}" /></a></li>
-							</ul>
-						</li>
-					</ul>
-				</h:panelGroup>
-			</h:panelGrid>
-		</div>
+
+
+
 	</ui:composition>
 </h:body>
 </h:html>
