@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Locale;
 
 import javax.faces.context.FacesContext;
-import javax.faces.event.ActionEvent;
 import javax.faces.event.ValueChangeEvent;
 import javax.faces.model.SelectItem;
 
@@ -18,9 +17,9 @@ public class MyBean implements Serializable {
 
     private List<SelectItem> listaIdiomas;
 
-    
+    private String idioma;
 	public void init(){
-
+		idioma=FacesContext.getCurrentInstance().getViewRoot().getLocale().getLanguage();
     	listaIdiomas = new ArrayList<SelectItem>();
     	SelectItem es = new SelectItem();
     	SelectItem en = new SelectItem();
@@ -37,6 +36,14 @@ public class MyBean implements Serializable {
     	listaIdiomas.add(fr);
     	
     }
+    
+    public String getIdioma() {
+        return idioma;
+    }
+    public void setIdioma(String idioma) {
+        this.idioma = idioma;
+    }
+
     public List<SelectItem> getListaIdiomas() {
     	
 		return listaIdiomas;
@@ -48,6 +55,7 @@ public class MyBean implements Serializable {
     public void selectedLocaleListener(ValueChangeEvent vce){
     	Locale l= new Locale(vce.getNewValue().toString());
     	FacesContext.getCurrentInstance().getViewRoot().setLocale(l);
+    	
     }
 
 }

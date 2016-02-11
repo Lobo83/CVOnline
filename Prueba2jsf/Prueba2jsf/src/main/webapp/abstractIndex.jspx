@@ -10,7 +10,7 @@
     <h:head>
 	 <h:outputStylesheet name="style.css" library="css" />
     </h:head>
- 
+ <f:view locale="#{myBean.idioma}"/>
     <h:body>
  
 
